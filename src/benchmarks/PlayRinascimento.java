@@ -176,11 +176,11 @@ public class PlayRinascimento {
 			//assets/defaultx2/  10000 8 true metrics
 			args = new String[]{
 					"assets/defaultx2/",
-					"agents/test_EF.json",
-					"10000",
-					"1",
+					"agents/test.json",
+					"1000",
+					"4",
 					"true",
-					"metrics"
+					"winrate"
 			};
 		}
 
@@ -231,8 +231,8 @@ public class PlayRinascimento {
 		profiler.stop();
 
 		if(profiler!=null){
-//			System.out.println("************** RESULTS *************");
-//			System.out.println("{\n\"results\": "+result+",\n}");
+			System.out.println("************** RESULTS *************");
+			System.out.println("{\n\"results\": "+result+",\n}");
 			System.out.println("********* PROFILER RESULTS *********");
 			System.out.println(profiler.toString());
 			System.out.println("************************************");

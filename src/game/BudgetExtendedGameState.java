@@ -12,6 +12,7 @@ import log.entities.event.EventLoggerDispatcher;
 public class BudgetExtendedGameState implements EventLoggerDispatcher {
 
 	protected State state;
+
 	private Budget budget;
 
 	public BudgetExtendedGameState(State state, Budget budget){
@@ -102,6 +103,10 @@ public class BudgetExtendedGameState implements EventLoggerDispatcher {
 
 	public State getState(){
 		return state;
+	}
+
+	public Budget getBudget() {
+		return budget;
 	}
 
 	@Override

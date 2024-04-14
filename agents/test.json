@@ -1,16 +1,16 @@
 {
   "agents": [
     {
-      "type": "RND",
-      "params": [],
-      "comment": "Random",
-      "name": "RND"
+      "type": "MCTS",
+      "params": [0,2,0,1,3,2,0,1,1,1,1,0,1,1],
+      "comment": "RAVE",
+      "name": "RAVE"
     },
     {
-      "type": "RND",
-      "params": [],
-      "comment": "Random",
-      "name": "RND"
+      "type": "MCTS",
+      "params": [0,1,0,1,3,0,0,2,0,1,0,0,0,0],
+      "comment": "RAVE",
+      "name": "RAVE"
     }
   ]
 }

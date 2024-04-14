@@ -22,7 +22,15 @@ import java.util.Arrays;
 import java.util.List;
 
 public class State implements ExtendedGameState, SeededExtendedGameState {
-	private static boolean reshuffleOnCopy = true;
+	public boolean isReshuffleOnCopy() {
+		return reshuffleOnCopy;
+	}
+
+	public void setReshuffleOnCopy(boolean reshuffleOnCopy) {
+		this.reshuffleOnCopy = reshuffleOnCopy;
+	}
+
+	private boolean reshuffleOnCopy = true;
 	private static Profiler profiler = new Profiler();
 
 	public Parameters params;
@@ -448,8 +456,9 @@ public class State implements ExtendedGameState, SeededExtendedGameState {
 		for(int deckId=0; deckId<this.params.deckCount; deckId++){
 			copy.deckStacks[deckId] = this.deckStacks[deckId].clone();
 			copy.board[deckId] = Arrays.copyOf(this.board[deckId],this.board[deckId].length);
-			if(reshuffleOnCopy)
+			if(reshuffleOnCopy) {
 				copy.deckStacks[deckId].shuffle();
+			}
 		}
 
 		copy.allNobles = this.allNobles;

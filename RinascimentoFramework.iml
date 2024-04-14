@@ -5,12 +5,17 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="corretto-1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="ntbea" level="project" />
     <orderEntry type="library" exported="" name="mapelites" level="project" />
     <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="library" exported="" name="neuroph" level="project" />
     <orderEntry type="library" exported="" name="Processing3" level="project" />
+    <orderEntry type="library" name="realityforge.jetbrains.annotations" level="project" />
+    <orderEntry type="library" name="apache.commons.math3" level="project" />
+    <orderEntry type="library" name="evaluatenn" level="project" />
+    <orderEntry type="library" name="gridsearch" level="project" />
+    <orderEntry type="library" name="itext-src" level="project" />
   </component>
 </module>

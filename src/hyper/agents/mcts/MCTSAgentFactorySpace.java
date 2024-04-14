@@ -1,6 +1,8 @@
 package hyper.agents.mcts;
 
+import game.heuristics.AllEvalHeuristic;
 import game.heuristics.Heuristic;
+import game.heuristics.PointsHeuristic;
 import hyper.agents.factory.HeuristicAgentFactorySpace;
 import ntbea.params.Param;
 import players.BasePlayerInterface;
@@ -28,9 +30,23 @@ public class MCTSAgentFactorySpace extends HeuristicAgentFactorySpace {
 		agent.epsilon				=  (double)params[6].getValue(solution[6]);
 		agent.recommendationType	= ((Double)params[7].getValue(solution[7])).intValue();
 		agent.rollWithOpponents		= (boolean)params[8].getValue(solution[8]);
+		agent.shuffleAtEachRolloutDepth = (boolean)params[9].getValue(solution[9]);
+		agent.adaptiveRollout       = (double)params[10].getValue(solution[10]);
+		agent.progressiveWidening       = (double)params[11].getValue(solution[11]);
+		agent.useAMAFStatistics       = (boolean)params[12].getValue(solution[12]);
 
+		double heuristic =  (double)params[13].getValue(solution[13]);
 		agent.setName(getAgentType());
-		agent.setHeuristic(getHeuristic());
+
+		if (heuristic == 0.0) {
+			agent.setHeuristic(new PointsHeuristic());
+		} else if (heuristic == 1.0){
+			agent.setHeuristic(new AllEvalHeuristic());
+		}
+
+		if (agent.useAMAFStatistics){
+			agent.setName("RAVE");
+		}
 
 		return agent;
 	}

@@ -21,7 +21,7 @@ import java.util.concurrent.*;
 
 public class RinascimentoEnv {
 
-	public static boolean VERBOSE = false;
+	public static boolean VERBOSE = true;
 	private static boolean MULTITHREADED = false;
 	private static int THREADS = 1 ;
 	private static ExecutorService pool;
